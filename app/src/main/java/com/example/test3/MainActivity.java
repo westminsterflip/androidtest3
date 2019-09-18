@@ -1,5 +1,6 @@
 package com.example.test3;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -77,17 +78,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /*@Override
+    @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         String ite = (String) item.getTitle();
-        System.out.println("selected");
         if (item.getTitle() != null && ((String) item.getTitle()).equals("Settings")){
             SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
             if (pref.getBoolean("setting",true))
                 openSettings();
+            return false;
         } else {
-            super.onOptionsItemSelected(item);
+            return super.onOptionsItemSelected(item);
         }
-        return true;
-    }*/
+    }
 }
